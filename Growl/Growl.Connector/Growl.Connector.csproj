@@ -11,7 +11,8 @@
     <RootNamespace>Growl.Connector</RootNamespace>
     <AssemblyName>Growl.Connector</AssemblyName>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>Growl.Connector.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -110,9 +111,6 @@
     <Compile Include="Response.cs" />
     <Compile Include="ResponseType.cs" />
     <Compile Include="UrlCallbackTarget.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Growl.Connector.pfx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Growl.CoreLibrary\Growl.CoreLibrary.csproj">

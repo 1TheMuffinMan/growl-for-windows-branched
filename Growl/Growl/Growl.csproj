@@ -56,14 +56,17 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL" />
-    <Reference Include="Mono.Zeroconf, Version=4.0.0.90, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Growl.Daemon\Third Party Assemblies\Mono.Zeroconf.dll</HintPath>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.2.0.246, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.2.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.CSharp.4.0.0.143\lib\4.5\Mono.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Zeroconf, Version=4.0.0.90, Culture=neutral, PublicKeyToken=e60c4f4a95e1099e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Zeroconf.0.9.0.0\lib\Net20\Mono.Zeroconf.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Zeroconf.Providers.Bonjour, Version=4.0.0.90, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Growl.Daemon\Third Party Assemblies\Mono.Zeroconf.Providers.Bonjour.dll</HintPath>
+      <HintPath>..\packages\Mono.Zeroconf.0.9.0.0\lib\Net20\Mono.Zeroconf.Providers.Bonjour.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -78,7 +81,6 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TrackBar, Version=1.0.2486.37933, Culture=neutral, PublicKeyToken=503bf28f63ad27b4" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddComputer.cs">
@@ -476,6 +478,10 @@
       <Project>{901C016A-9008-4190-A067-E578E7E66B1A}</Project>
       <Name>Growl.UDPLegacy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TrackBar\TrackBar.csproj">
+      <Project>{5b058de3-8c14-48cd-b258-1d480d67f47d}</Project>
+      <Name>TrackBar</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\button_add.png" />
@@ -584,17 +590,12 @@
     <None Include="Resources\windows.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="lib\ICSharpCode.SharpZipLib.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="growl.ico" />
     <Content Include="icons_license.pdf" />
     <Content Include="Growl.exe.manifest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="lib\TrackBar.dll" />
     <Content Include="installer.jpg" />
-    <None Include="lib\Newtonsoft.Json.dll" />
     <Content Include="license.txt" />
     <Content Include="release_notes.txt" />
     <None Include="Resources\notifyio.png" />
@@ -627,6 +628,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

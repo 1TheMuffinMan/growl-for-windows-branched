@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Growl.Daemon", "Growl.Daemon\Growl.Daemon.csproj", "{6112CD52-1F16-4068-8D16-CB9C5467E8C3}"
 EndProject
@@ -48,6 +48,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test Server", "Test Server\Test Server.csproj", "{25D4D0A4-22D0-4E87-A8D6-A58AA592D28C}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Windows Deployment", "Windows Deployment\Windows Deployment.vdproj", "{E9740EF0-ED81-4AF7-A720-CEADEF89E69E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackBar", "TrackBar\TrackBar.csproj", "{5B058DE3-8C14-48CD-B258-1D480D67F47D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -271,8 +273,23 @@ Global
 		{E9740EF0-ED81-4AF7-A720-CEADEF89E69E}.Release|Any CPU.Build.0 = Release
 		{E9740EF0-ED81-4AF7-A720-CEADEF89E69E}.Release|x86.ActiveCfg = Release
 		{E9740EF0-ED81-4AF7-A720-CEADEF89E69E}.Release|x86.Build.0 = Release
+		{5B058DE3-8C14-48CD-B258-1D480D67F47D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B058DE3-8C14-48CD-B258-1D480D67F47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B058DE3-8C14-48CD-B258-1D480D67F47D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5B058DE3-8C14-48CD-B258-1D480D67F47D}.Debug|x86.Build.0 = Debug|Any CPU
+		{5B058DE3-8C14-48CD-B258-1D480D67F47D}.Mono|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B058DE3-8C14-48CD-B258-1D480D67F47D}.Mono|Any CPU.Build.0 = Debug|Any CPU
+		{5B058DE3-8C14-48CD-B258-1D480D67F47D}.Mono|x86.ActiveCfg = Debug|Any CPU
+		{5B058DE3-8C14-48CD-B258-1D480D67F47D}.Mono|x86.Build.0 = Debug|Any CPU
+		{5B058DE3-8C14-48CD-B258-1D480D67F47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B058DE3-8C14-48CD-B258-1D480D67F47D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B058DE3-8C14-48CD-B258-1D480D67F47D}.Release|x86.ActiveCfg = Release|Any CPU
+		{5B058DE3-8C14-48CD-B258-1D480D67F47D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {802A9E6F-3E98-4505-9AE0-95D0C6CE88EA}
 	EndGlobalSection
 EndGlobal

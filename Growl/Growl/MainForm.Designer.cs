@@ -1,3 +1,5 @@
+
+
 namespace Growl
 {
     partial class MainForm
@@ -97,7 +99,7 @@ namespace Growl
             this.historyFilterTextBox = new System.Windows.Forms.TextBox();
             this.buttonClearHistory = new Growl.UI.ButtonEx();
             this.historyDaysGroupBox = new System.Windows.Forms.GroupBox();
-            this.historyDaysTrackBar = new Dotnetrix.Controls.TrackBar();
+            this.historyDaysTrackBar = new global::TrackBar.Dotnetrix.Controls.TrackBar();
             this.historySortByGroupBox = new System.Windows.Forms.GroupBox();
             this.historySortByDateRadioButton = new System.Windows.Forms.RadioButton();
             this.historySortByApplicationRadioButton = new System.Windows.Forms.RadioButton();
@@ -1716,7 +1718,7 @@ namespace Growl
         private System.Windows.Forms.RadioButton historySortByDateRadioButton;
         private System.Windows.Forms.GroupBox historySortByGroupBox;
         private System.Windows.Forms.RadioButton historySortByApplicationRadioButton;
-        private Dotnetrix.Controls.TrackBar historyDaysTrackBar;
+        private TrackBar.Dotnetrix.Controls.TrackBar historyDaysTrackBar;
         private System.Windows.Forms.GroupBox historyDaysGroupBox;
         private System.Windows.Forms.Panel panelDisplaySettings;
         private System.Windows.Forms.Panel panelDisplaySettingsContainer;
