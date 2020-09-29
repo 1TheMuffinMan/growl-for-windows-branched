@@ -15,19 +15,23 @@ namespace Growl.Displays.Smokestack
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SmokestackWindow));
             this.panel1 = new Growl.Displays.Smokestack.PanelEx();
+            this.closeButton = new System.Windows.Forms.PictureBox();
             this.descriptionLabel = new Growl.DisplayStyle.ExpandingLabel();
             this.titleLabel = new Growl.DisplayStyle.ExpandingLabel();
             this.applicationNameLabel = new Growl.DisplayStyle.ExpandingLabel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.closeButton);
             this.panel1.Controls.Add(this.descriptionLabel);
             this.panel1.Controls.Add(this.titleLabel);
             this.panel1.Controls.Add(this.applicationNameLabel);
@@ -36,10 +40,20 @@ namespace Growl.Displays.Smokestack
             this.panel1.Size = new System.Drawing.Size(242, 100);
             this.panel1.TabIndex = 0;
             // 
+            // closeButton
+            // 
+            this.closeButton.Image = ((System.Drawing.Image)(resources.GetObject("closeButton.Image")));
+            this.closeButton.Location = new System.Drawing.Point(224, 7);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(16, 16);
+            this.closeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closeButton.TabIndex = 3;
+            this.closeButton.TabStop = false;
+            // 
             // descriptionLabel
             // 
-            this.descriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.descriptionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.descriptionLabel.BackColor = System.Drawing.Color.Transparent;
             this.descriptionLabel.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.descriptionLabel.ForeColor = System.Drawing.Color.White;
@@ -54,8 +68,8 @@ namespace Growl.Displays.Smokestack
             // 
             // titleLabel
             // 
-            this.titleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.titleLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.titleLabel.BackColor = System.Drawing.Color.Transparent;
             this.titleLabel.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.ForeColor = System.Drawing.Color.White;
@@ -70,8 +84,8 @@ namespace Growl.Displays.Smokestack
             // 
             // applicationNameLabel
             // 
-            this.applicationNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.applicationNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.applicationNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.applicationNameLabel.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicationNameLabel.ForeColor = System.Drawing.Color.White;
@@ -95,6 +109,7 @@ namespace Growl.Displays.Smokestack
             this.Name = "SmokestackWindow";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -105,7 +120,7 @@ namespace Growl.Displays.Smokestack
         private Growl.DisplayStyle.ExpandingLabel descriptionLabel;
         private Growl.DisplayStyle.ExpandingLabel titleLabel;
         private Growl.DisplayStyle.ExpandingLabel applicationNameLabel;
-
+        private System.Windows.Forms.PictureBox closeButton;
     }
 }
 

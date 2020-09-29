@@ -351,7 +351,7 @@ namespace Growl.DisplayStyle
         /// </remarks>
         public void StartAutoCloseTimer()
         {
-            if(this.isAutoClose)
+            if (this.isAutoClose)
                 this.displayTimer.Start();
         }
 
@@ -452,10 +452,13 @@ namespace Growl.DisplayStyle
         /// </remarks>
         protected void HookUpClickEvents(Control control)
         {
-            if(control != null)
+            if (control != null)
             {
                 //control.Click += new EventHandler(c_Click);
-                control.MouseClick += new MouseEventHandler(control_MouseClick);
+                if (control.Name == "closeButton")
+                    control.MouseClick += new MouseEventHandler(control_MouseClickDismiss);
+                else
+                    control.MouseClick += new MouseEventHandler(control_MouseClick);
                 foreach (Control c in control.Controls)
                 {
                     HookUpClickEvents(c);
@@ -494,7 +497,7 @@ namespace Growl.DisplayStyle
         {
             this.OnNotificationClicked(new Growl.CoreLibrary.NotificationCallbackEventArgs(this.NotificationUUID, Growl.CoreLibrary.CallbackResult.CLICK));
             if (this.fireFormClick && sender != this) this.OnClick(e);    // if a child control was clicked on, also fire Click on the main form
-            if(!this.dontCloseOnClick) this.Close();
+            if (!this.dontCloseOnClick) this.Close();
         }
 
         /// <summary>
@@ -522,6 +525,16 @@ namespace Growl.DisplayStyle
                 if (this.fireFormClick && sender != this) this.OnClick(e);    // if a child control was clicked on, also fire Click on the main form
                 if (!this.dontCloseOnClick) this.Close();
             }
+        }
+
+        /// <summary>
+        /// Dismisses the notification on left or right mouse click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void control_MouseClickDismiss(object sender, MouseEventArgs e)
+        {
+            this.Close(true);
         }
 
         /// <summary>

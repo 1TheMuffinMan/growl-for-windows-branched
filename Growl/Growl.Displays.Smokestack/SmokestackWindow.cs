@@ -213,7 +213,7 @@ namespace Growl.Displays.Smokestack
             g.FillPolygon(arrowBrush, points2);
 
             if (this.image != null)
-                g.DrawImage(this.image, width - imageSize - imagePadding, imagePadding + borderTopOffset, imageSize, imageSize);
+                g.DrawImage(this.image, width - imageSize - imagePadding -20, imagePadding + borderTopOffset, imageSize, imageSize);
         }
 
         private void applicationNameLabel_LabelHeightChanged(ExpandingLabel.LabelHeightChangedEventArgs args)

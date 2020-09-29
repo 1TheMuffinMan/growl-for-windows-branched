@@ -612,6 +612,7 @@
     <None Include="Resources\growl.png" />
     <None Include="Resources\toasty.png" />
     <None Include="Resources\tab_about.png" />
+    <None Include="Resources\close_1-512_white.png" />
     <Content Include="update.manifest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
