@@ -57,7 +57,7 @@ namespace Growl
                 SingleInstanceApplication app = null;
                 try
                 {
-                    app = new SingleInstanceApplication("GrowlForWindows");
+                    app = new SingleInstanceApplication("GrowlForWindows" + "+" + System.Security.Principal.WindowsIdentity.GetCurrent().Name.Replace("\\","+"));
                 }
                 catch(Exception e)
                 {

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
@@ -221,7 +222,10 @@ namespace Growl.UDPLegacy
         /// <param name="packet">The <see cref="BasePacket"/> representing the message to send</param>
         private void Send(BasePacket packet)
         {
-            UdpClient udp = new UdpClient(this.ipAddress, this.port);
+            IPEndPoint endpoint = new IPEndPoint(System.Net.IPAddress.Any, this.port);
+            UdpClient udp = new UdpClient();
+            udp.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+            udp.Client.Bind(endpoint);
             using (udp)
             {
                 udp.Send(packet.Data, packet.Data.Length);

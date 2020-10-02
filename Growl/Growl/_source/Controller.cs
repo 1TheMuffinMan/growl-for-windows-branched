@@ -174,9 +174,9 @@ namespace Growl
                 started = this.udpListener.Start();
                 if (!started)
                 {
-                    if (this.gntpListener != null) this.gntpListener.Stop();    // stop the GNTP listener if it was already started
-                    this.OnFailedToStartUDPLegacy(this, new PortConflictEventArgs(Growl.UDPLegacy.MessageReceiver.NETWORK_PORT));
-                    return false;
+                    //if (this.gntpListener != null) this.gntpListener.Stop();    // stop the GNTP listener if it was already started
+                    //this.OnFailedToStartUDPLegacy(this, new PortConflictEventArgs(Growl.UDPLegacy.MessageReceiver.NETWORK_PORT));
+                    //return false;
                 }
 
                 // this is for local UDP requests (old GFW local protocol)
@@ -187,13 +187,13 @@ namespace Growl
                 this.udpListenerLocal.RequireLocalPassword = Properties.Settings.Default.RequireLocalPassword;
                 this.udpListenerLocal.RequireLANPassword = Properties.Settings.Default.RequireLANPassword;
                 started = this.udpListenerLocal.Start();
-                if (!started)
-                {
-                    if (this.gntpListener != null) this.gntpListener.Stop();    // stop the GNTP listener if it was already started
-                    if (this.udpListener != null) this.udpListener.Stop();      // stop the network UDP listener if it was already started
-                    this.OnFailedToStartUDPLegacy(this, new PortConflictEventArgs(Growl.UDPLegacy.MessageReceiver.NETWORK_PORT));
-                    return false;
-                }
+                //if (!started)
+                //{
+                //    if (this.gntpListener != null) this.gntpListener.Stop();    // stop the GNTP listener if it was already started
+                //    if (this.udpListener != null) this.udpListener.Stop();      // stop the network UDP listener if it was already started
+                //    this.OnFailedToStartUDPLegacy(this, new PortConflictEventArgs(Growl.UDPLegacy.MessageReceiver.NETWORK_PORT));
+                //    return false;
+                //}
             }
 
             this.isRunning = true;
@@ -1434,6 +1434,7 @@ namespace Growl
 
         protected void OnFailedToStartUDPLegacy(object sender, PortConflictEventArgs args)
         {
+            return;
             if (this.synchronizingObject != null && this.synchronizingObject.InvokeRequired)
             {
                 MethodInvoker invoker = new MethodInvoker(delegate()

@@ -55,7 +55,9 @@ namespace Growl.UDPLegacy
         {
             IPAddress address = (this.localMessagesOnly ? IPAddress.Loopback : IPAddress.Any);
             IPEndPoint endpoint = new IPEndPoint(address, this.port);
-            this.udp = new UdpClient(endpoint);
+            this.udp = new UdpClient();
+            udp.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+            udp.Client.Bind(endpoint);
             AsyncCallback callback = new AsyncCallback(this.ProcessPacket);
 
             UdpState state = new UdpState();
